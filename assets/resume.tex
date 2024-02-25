@@ -1,0 +1,132 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    \usepackage[left=0.8in,right=0.8in,bottom=0.8in,top=0.8in]{geometry}
+
+%\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\newcommand\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+        {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+        { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+    {\Huge \scshape {#1}}\\
+    #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+    {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+    \vspace*{-40pt}
+
+
+
+%==== Profile ====%
+    \vspace*{-10pt}
+    \begin{center}
+    {\Huge \scshape {Justin Lin}}\\
+    Taiwan, Taipei $\cdot$ l6104400@gmail.com $\cdot$ 0981392891 $\cdot$ github.com/jubeatwww\\
+    \end{center}
+
+%==== Experience ====%
+    \header{Experience}
+    \vspace{1mm}
+
+    \textbf{Digit Spark} \hfill Taipei, Taiwan\\
+    \textit{Lead Software Engineer} \hfill Jan 2023 - Present\\
+    \vspace{-1mm}
+    \begin{itemize} \itemsep 1pt
+    \item Manage and execute strategic refactoring projects for cost-efficient services, achieving a 35\% reduction in database expenses.
+    \item Guide my team through comprehensive refactoring of a 3TB database (2 billion records) and oversee architectural enhancements, achieving a drastic reduction in feature response times from over 10 minutes to under 5 seconds.
+    \item Lead the infrastructure design and collaborate with the execution team to develop an advertising delivery system from scratch, achieving 100K daily ad views and accommodating up to 10K requests at peak times, all while optimizing cloud expenses to maintain a modest budget of approximately 500 USD per month.
+    \item Lead the design and development of an SEO audit system, facilitating collaboration between stakeholders and engineering teams to tailor features to market needs, thereby reducing manual workload and boosting client efficiency by 15\%.
+    \item Deploy a message broker to handle sudden traffic surges, cutting the request fail rate by 90\%, and solving 30\% of customer complaints.
+    \item Fix cross-cloud database issues, enabling the consolidation of two API servers and one load balancer into Kubernetes, which optimizes idle resource usage.
+    \end{itemize}
+    \textbf{Daione} \hfill Taipei, Taiwan\\
+    \textit{Software Engineer} \hfill Dec 2019 - Dec 2022\\
+    \vspace{-1mm}
+    \begin{itemize} \itemsep 1pt
+    \item Led the development of a business marketing matchmaking system from inception to launch, overseeing the architecture and execution of the enterprise side within a year.
+    Collaborated closely with outsourced teams on the KOL side, integrating features such as contract signing, subscriptions, and a points system, ultimately attracting 500 enterprises and over 5,000 KOLs.
+    \item Directed a team of three in developing an i18n collaborative editing mechanism that enabled direct website text updates without engineering intervention, saving over four hours per week on text revisions.
+    \item Engineered and executed a redesign of the email delivery infrastructure, achieving a 30\% reduction in notification email drop rates and completely eradicating server downtime.
+    \end{itemize}
+    \textbf{Junyi Academy} \hfill Taipei, Taiwan\\
+    \textit{Software Engineer (Part Time)} \hfill Sep 2017 - Present\\
+    \vspace{-1mm}
+    \begin{itemize} \itemsep 1pt
+    \item Redesigned server architecture, achieving a 72\% reduction in cloud expenses by optimizing resource utilization and implementing cost-effective solutions.
+    \item Led the successful migration of the entire project from Python 2 to Python 3.9, ensuring compatibility and leveraging new language features to enhance performance.
+    \item Spearheaded the upgrade of the main application to React 16.4, introducing React Hooks and modernizing the use of third-party libraries, resulting in improved development efficiency and application stability.
+    \end{itemize}
+
+    \header{Skills}
+    \begin{tabular}{ l l }
+        Programming Languages: & Typescript, Golang, PHP, Python, Java/Kotlin            \\
+        Frontend:              & Vue, React, Angular                                     \\
+        Databases:             & Mysql, Postgresql                                       \\
+        Miscellaneous:         & Linux, k8s, CI/CD, Refactoring Code, Clean Architecture \\
+    \end{tabular}
+    \vspace{2mm}
+
+
+
+%==== Education ====%
+    \header{Education}
+    \textbf{National Chiao Tung University}\hfill Hsinchu\\
+    BS Computer Science \hfill Sep 2013 - Jun 2017\\
+    \vspace{2mm}
+
+
+
+    \
+\end{document}
